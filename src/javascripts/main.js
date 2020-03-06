@@ -1,4 +1,8 @@
 import '../styles/main.scss';
+import eat from './components/eat';
 
+const init = () => {
+  eat.buildEatSection();
+};
 
-console.error('This is the js');
+init();
