@@ -14,14 +14,14 @@ const checkFun = (funLevel) => {
   return tamodata.setFun(funLevel);
 };
 
-// add 10 to hunger if pressed
+// add 50 to Fun if pressed
 const superFun = () => {
   let funLevel = tamodata.getFun();
   funLevel += 50;
   $('#fun-level').text(checkFun(funLevel));
 };
 
-// subtracts 3 from hunger if pressed
+// add 2 to fun if pressed
 const slightlyFun = () => {
   let funLevel = tamodata.getFun();
   funLevel += 2;
