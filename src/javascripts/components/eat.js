@@ -18,16 +18,14 @@ const checkFull = (hunger) => {
 const healthyFood = () => {
   let hungry = tamodata.getFull();
   hungry += 10;
-  checkFull(hungry);
-  buildEatSection();
+  $('#hunger').text(checkFull(hungry));
 };
 
 // subtracts 3 from hunger if pressed
 const unhealthyFood = () => {
   let hungry = tamodata.getFull();
   hungry -= 3;
-  checkFull(hungry);
-  buildEatSection();
+  $('#hunger').text(checkFull(hungry));
 };
 
 // builds out the div
@@ -35,7 +33,7 @@ const buildEatSection = () => {
   let domString = '';
 
   domString += '<h1>Eat</h1>';
-  domString += `<h2>${tamodata.getFull()}</h2>`;
+  domString += `<h2 id=hunger>${tamodata.getFull()}</h2>`;
   domString += '<button id="healthy-food">Healthy Food</button>';
   domString += '<button id="unhealthy-food">Unhealthy Food</button>';
 
