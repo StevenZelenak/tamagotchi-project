@@ -1,5 +1,5 @@
-import util from '../helpers/util';
-import tamodata from '../helpers/data/tamodata';
+import util from '../../helpers/util';
+import tamodata from '../../helpers/data/tamodata';
 // checks if full varibale goes over 100 or under 0
 const checkStrength = (strengthLevel) => {
   if (strengthLevel > 100) {
