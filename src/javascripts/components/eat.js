@@ -1,56 +1,41 @@
 import util from '../helpers/util';
-
-// initail variable
-let full = 100;
-
-// get variable and passes it out
-const getFull = () => {
-  return full;
-};
-
-// set the full variable
-const setFull = (assignedNumber) => {
-  full = assignedNumber;
-  return full;
-};
-
+import tamodata from '../helpers/data/tamodata';
 // checks if full varibale goes over 100 or under 0
-const checkFull = (something) => {
-  if (something > 100) {
-    something = 100;
-    return something;
+const checkFull = (hunger) => {
+  if (hunger > 100) {
+    tamodata.setFull(100);
+    return tamodata.getFull();
   }
-  if (something < 0) {
-    something = 0;
-    return something;
+  if (hunger < 0) {
+    tamodata.setFull(0);
+    return tamodata.getFull();
   }
 
-  return something;
+  return tamodata.setFull(hunger);
 };
 
 // add 10 to hunger if pressed
 const healthyFood = () => {
-  let hungry = getFull();
+  let hungry = tamodata.getFull();
   hungry += 10;
-  setFull(checkFull(hungry));
+  checkFull(hungry);
   buildEatSection();
 };
 
 // subtracts 3 from hunger if pressed
 const unhealthyFood = () => {
-  let hungry = getFull();
+  let hungry = tamodata.getFull();
   hungry -= 3;
-  setFull(checkFull(hungry));
+  checkFull(hungry);
   buildEatSection();
 };
 
 // builds out the div
 const buildEatSection = () => {
-
   let domString = '';
 
   domString += '<h1>Eat</h1>';
-  domString += `<h2>${getFull()}</h2>`;
+  domString += `<h2>${tamodata.getFull()}</h2>`;
   domString += '<button id="healthy-food">Healthy Food</button>';
   domString += '<button id="unhealthy-food">Unhealthy Food</button>';
 
