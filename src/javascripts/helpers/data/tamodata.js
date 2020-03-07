@@ -1,7 +1,8 @@
 // initail variable
 let full = 100;
 let fun = 50;
-let strength = 50;
+let strength = 100;
+let energy = 50;
 
 // gets full variable and passes it out
 const getFull = () => full;
@@ -30,6 +31,15 @@ const setStrength = (assignedNumber) => {
   return strength;
 };
 
+// gets strength variable and passes it out
+const getEnergy = () => energy;
+
+// set the strength variable
+const setEnergy = (assignedNumber) => {
+  energy = assignedNumber;
+  return energy;
+};
+
 export default {
   getFull,
   setFull,
@@ -37,4 +47,6 @@ export default {
   setFun,
   getStrength,
   setStrength,
+  getEnergy,
+  setEnergy,
 };
