@@ -7,7 +7,7 @@ The Tamagotchi has four values eat, fight, play, sleep. Which go up or down depe
 
 ## Screenshots
 
-![Main Screen](./screenshots/screenshot1.png)
+![Main Screen](./src/screenshots/screenshot1.png)
 
 ## How to Run
 
