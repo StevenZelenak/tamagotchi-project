@@ -1,4 +1,5 @@
 import util from '../../helpers/util';
+import './eat.scss';
 import tamodata from '../../helpers/data/tamodata';
 // checks if full varibale goes over 100 or under 0
 const checkFull = (hunger) => {

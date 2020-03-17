@@ -3,4 +3,28 @@
 
 body {
   background-color: white;
+
+  div {
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 50px;
+
+    .quad {
+      border: solid black 3px;
+      border-radius: 10px;
+      width: 48%;
+      margin: 1%;
+      flex-flow: column;
+      height: 200px;
+      text-align: center;
+
+      button {
+        align-content: center;
+        margin: auto;
+        width: 25%;
+        border-radius: 5px;
+      }
+    }
+
+  }
 }
